@@ -20,8 +20,7 @@ namespace iiMenu.Mods
     {
         public static void WeatherChange(bool rain)
         {
-            for (int i = 0; i < BetterDayNightManager.instance.weatherCycle.Length; i++)
-                BetterDayNightManager.instance.weatherCycle[i] = rain ? BetterDayNightManager.WeatherType.Raining : BetterDayNightManager.WeatherType.None;
+            BetterDayNightManager.instance.SetFixedWeather(rain ? BetterDayNightManager.WeatherType.Raining : BetterDayNightManager.WeatherType.None);
         }
 
         public static void DisableFog() =>
